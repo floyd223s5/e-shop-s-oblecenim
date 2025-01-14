@@ -27,8 +27,14 @@
         >
           Contact
         </router-link>
+        <router-link
+          to="/cart"
+          class="text-gray-600 hover:text-gray-900 transition duration-200"
+          :class="{ 'text-gray-900 font-semibold': isActive('/cart') }"
+        >
+          Cart
+        </router-link>
       </div>
-
       <button class="md:hidden" @click="toggleMenu" aria-label="Toggle Menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -70,6 +76,13 @@
           @click="toggleMenu"
         >
           Contact
+        </router-link>
+        <router-link
+          to="/cart"
+          class="block py-2 text-gray-600 hover:text-gray-900 transition duration-200"
+          @click="toggleMenu"
+        >
+          Cart
         </router-link>
       </div>
     </div>

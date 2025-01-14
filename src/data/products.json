@@ -12,9 +12,9 @@
   {
     "id": 2,
     "name": "Slim Fit Jeans",
-    "category": "Jeans",
+    "category": "T-Shirts",
     "price": 49.99,
-    "sizes": ["28", "30", "32", "34", "36"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
     "colors": ["Blue", "Black"],
     "image": "/images/products/slim-fit-jeans.jpg",
     "description": "Comfortable and stylish slim-fit jeans for everyday wear."
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "name": "Floral Summer Dress",
-    "category": "Dresses",
+    "category": "Hoodies",
     "price": 59.99,
     "sizes": ["S", "M", "L"],
     "colors": ["Red", "Yellow", "Green"],
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "name": "Leather Jacket",
-    "category": "Jackets",
+    "category": "T-Shirts",
     "price": 119.99,
     "sizes": ["M", "L", "XL"],
     "colors": ["Black", "Brown"],

@@ -4,15 +4,13 @@
       <div
         class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-12 md:space-y-0"
       >
-        <!-- About Section -->
         <div class="w-full md:w-1/3 text-center md:text-left">
-          <h2 class="text-2xl font-extrabold text-gray-900 mb-4">Otaruwear</h2>
+          <h2 class="text-2xl font-extrabold text-gray-900 mb-4">OTARUWEAR</h2>
           <p class="text-gray-600 leading-relaxed">
             Discover the latest trends in fashion. High-quality clothing that makes you stand out.
           </p>
         </div>
 
-        <!-- Quick Links -->
         <div class="w-full md:w-1/3 text-center md:text-left">
           <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
           <ul class="space-y-3">
@@ -48,13 +46,12 @@
           </ul>
         </div>
 
-        <!-- Contact Section -->
         <div class="w-full md:w-1/3 text-center md:text-left">
           <h3 class="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
           <ul class="space-y-3">
-            <li class="text-gray-600">Email: support@otaruwear.com</li>
-            <li class="text-gray-600">Phone: +123 456 789</li>
-            <li class="text-gray-600">Address: 123 Fashion Street, NY</li>
+            <li class="text-gray-600">Email: shop@otaruwear.com</li>
+            <li class="text-gray-600">Phone: +421 940 820 144</li>
+            <li class="text-gray-600">Address: Rybárska 17, Nitra, Slovakia</li>
           </ul>
         </div>
       </div>
@@ -73,7 +70,6 @@ export default {
 </script>
 
 <style scoped>
-/* Importing modern font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
