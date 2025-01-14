@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Classic White T-Shirt",
+    "category": "T-Shirts",
+    "price": 19.99,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["White"],
+    "image": "/images/products/classic-white-tshirt.jpg",
+    "description": "A timeless white T-shirt made with 100% organic cotton."
+  },
+  {
+    "id": 2,
+    "name": "Slim Fit Jeans",
+    "category": "Jeans",
+    "price": 49.99,
+    "sizes": ["28", "30", "32", "34", "36"],
+    "colors": ["Blue", "Black"],
+    "image": "/images/products/slim-fit-jeans.jpg",
+    "description": "Comfortable and stylish slim-fit jeans for everyday wear."
+  },
+  {
+    "id": 3,
+    "name": "Hooded Sweatshirt",
+    "category": "Hoodies",
+    "price": 39.99,
+    "sizes": ["M", "L", "XL", "XXL"],
+    "colors": ["Gray", "Navy Blue"],
+    "image": "/images/products/hooded-sweatshirt.jpg",
+    "description": "A cozy hooded sweatshirt made from a soft fleece blend."
+  },
+  {
+    "id": 4,
+    "name": "Floral Summer Dress",
+    "category": "Dresses",
+    "price": 59.99,
+    "sizes": ["S", "M", "L"],
+    "colors": ["Red", "Yellow", "Green"],
+    "image": "/images/products/floral-summer-dress.jpg",
+    "description": "A light and breezy summer dress with a floral print."
+  },
+  {
+    "id": 5,
+    "name": "Leather Jacket",
+    "category": "Jackets",
+    "price": 119.99,
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Black", "Brown"],
+    "image": "/images/products/leather-jacket.jpg",
+    "description": "A classic leather jacket crafted from high-quality materials."
+  }
+]
