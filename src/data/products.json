@@ -11,42 +11,42 @@
   },
   {
     "id": 2,
-    "name": "Slim Fit Jeans",
+    "name": "Graphic T-Shirt",
     "category": "T-Shirts",
     "price": 49.99,
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "colors": ["Blue", "Black"],
     "image": "/images/products/slim-fit-jeans.jpg",
-    "description": "Comfortable and stylish slim-fit jeans for everyday wear."
+    "description": "A comfortable T-shirt featuring bold graphics for a modern look."
   },
   {
     "id": 3,
-    "name": "Hooded Sweatshirt",
+    "name": "Classic Hoodie",
     "category": "Hoodies",
     "price": 39.99,
     "sizes": ["M", "L", "XL", "XXL"],
     "colors": ["Gray", "Navy Blue"],
     "image": "/images/products/hooded-sweatshirt.jpg",
-    "description": "A cozy hooded sweatshirt made from a soft fleece blend."
+    "description": "A classic hoodie made with soft fleece to keep you warm and stylish."
   },
   {
     "id": 4,
-    "name": "Floral Summer Dress",
-    "category": "Hoodies",
+    "name": "Pullover Sweatshirt",
+    "category": "Sweatshirts",
     "price": 59.99,
     "sizes": ["S", "M", "L"],
     "colors": ["Red", "Yellow", "Green"],
     "image": "/images/products/floral-summer-dress.jpg",
-    "description": "A light and breezy summer dress with a floral print."
+    "description": "A cozy pullover sweatshirt for casual comfort and everyday wear."
   },
   {
     "id": 5,
-    "name": "Leather Jacket",
-    "category": "T-Shirts",
+    "name": "Zip-Up Sweatshirt",
+    "category": "Sweatshirts",
     "price": 119.99,
     "sizes": ["M", "L", "XL"],
     "colors": ["Black", "Brown"],
     "image": "/images/products/leather-jacket.jpg",
-    "description": "A classic leather jacket crafted from high-quality materials."
+    "description": "A versatile zip-up sweatshirt perfect for layering and keeping warm."
   }
 ]
