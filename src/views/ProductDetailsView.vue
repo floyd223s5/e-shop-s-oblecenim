@@ -37,12 +37,16 @@
           </div>
         </div>
 
-        <button
-          class="mt-8 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
-          @click="addToCart"
-        >
-          Add to Cart
-        </button>
+        <div class="relative mt-8">
+          <LoadingSpinner :visible="isLoading" />
+          <button
+            v-if="!isLoading"
+            class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
+            @click="addToCart"
+          >
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
 
@@ -59,6 +63,7 @@
 import { defineComponent } from 'vue'
 import { useCartStore } from '@/stores/cartStore.ts'
 import AlertMessage from '@/components/AlertMsg.vue'
+import LoadingSpinner from '@/components/LoadingSpinner.vue'
 import products from '@/data/products.json'
 
 interface Product {
@@ -75,6 +80,7 @@ export default defineComponent({
   name: 'ProductDetailsView',
   components: {
     AlertMessage,
+    LoadingSpinner,
   },
   props: {
     id: {
@@ -87,6 +93,7 @@ export default defineComponent({
       product: null as Product | null,
       alertVisible: false,
       alertMessage: '',
+      isLoading: false,
     }
   },
   computed: {
@@ -96,22 +103,30 @@ export default defineComponent({
   },
   methods: {
     addToCart() {
-      if (this.product) {
+      if (!this.product) {
+        console.error('Product is null')
+        return
+      }
+
+      this.isLoading = true
+
+      setTimeout(() => {
         this.cartStore.addToCart({
-          id: this.product.id,
-          name: this.product.name,
-          price: this.product.price,
+          id: this.product!.id,
+          name: this.product!.name,
+          price: this.product!.price,
           quantity: 1,
-          image: this.product.image,
+          image: this.product!.image,
         })
 
-        this.alertMessage = `${this.product.name} has been added to the cart!`
+        this.alertMessage = `${this.product!.name} has been added to the cart!`
         this.alertVisible = true
+        this.isLoading = false
 
         setTimeout(() => {
           this.alertVisible = false
         }, 3000)
-      }
+      }, 2000)
     },
   },
   created() {
@@ -126,5 +141,10 @@ export default defineComponent({
 <style scoped>
 .container {
   max-width: 1200px;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 </style>
