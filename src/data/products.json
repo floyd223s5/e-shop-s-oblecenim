@@ -48,5 +48,75 @@
     "colors": ["Black", "Brown"],
     "image": "/src/assets/products/hoodie2.jpeg",
     "description": "A versatile zip-up sweatshirt perfect for layering and keeping warm."
+  },
+  {
+    "id": 6,
+    "name": "V-Neck T-Shirt",
+    "category": "T-Shirts",
+    "price": 24.99,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Black", "White"],
+    "image": "/src/assets/products/lffy_1.jpg",
+    "description": "A comfortable and stylish V-neck T-shirt made with premium cotton."
+  },
+  {
+    "id": 7,
+    "name": "Oversized Hoodie",
+    "category": "Hoodies",
+    "price": 49.99,
+    "sizes": ["L", "XL", "XXL"],
+    "colors": ["Gray", "Beige"],
+    "image": "/src/assets/products/sxc_1.jpeg",
+    "description": "An oversized hoodie for a relaxed fit and ultimate comfort."
+  },
+  {
+    "id": 8,
+    "name": "Cropped Sweatshirt",
+    "category": "Sweatshirts",
+    "price": 54.99,
+    "sizes": ["S", "M", "L"],
+    "colors": ["Pink", "Blue"],
+    "image": "/src/assets/products/sxn_1.jpg",
+    "description": "A trendy cropped sweatshirt, perfect for pairing with high-waisted bottoms."
+  },
+  {
+    "id": 9,
+    "name": "Long Sleeve T-Shirt",
+    "category": "T-Shirts",
+    "price": 29.99,
+    "sizes": ["M", "L", "XL", "XXL"],
+    "colors": ["Navy Blue", "Charcoal"],
+    "image": "/src/assets/products/gojo_1.jpeg",
+    "description": "A soft long sleeve T-shirt, ideal for layering or wearing on its own."
+  },
+  {
+    "id": 10,
+    "name": "Classic Pullover Hoodie",
+    "category": "Hoodies",
+    "price": 59.99,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Red", "Black"],
+    "image": "/src/assets/products/tt_1.jpeg",
+    "description": "A classic pullover hoodie with a kangaroo pocket and adjustable drawstring."
+  },
+  {
+    "id": 11,
+    "name": "Embroidered Sweatshirt",
+    "category": "Sweatshirts",
+    "price": 69.99,
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Green", "White"],
+    "image": "/src/assets/products/ds_1.jpg",
+    "description": "A premium embroidered sweatshirt with intricate detailing."
+  },
+  {
+    "id": 12,
+    "name": "Premium Cotton T-Shirt",
+    "category": "T-Shirts",
+    "price": 34.99,
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Olive Green", "Burgundy"],
+    "image": "/src/assets/products/jjk_1.jpg",
+    "description": "A premium cotton T-shirt designed for both style and durability."
   }
 ]
