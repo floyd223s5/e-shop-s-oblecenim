@@ -103,7 +103,7 @@ export default defineComponent({
         setTimeout(() => {
           this.alertVisible = false
         }, 3000)
-      }, 2000) // Simulates a 2-second delay for form submission
+      }, 2000)
     },
   },
 })
