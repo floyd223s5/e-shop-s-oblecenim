@@ -6,7 +6,7 @@
     "price": 19.99,
     "sizes": ["S", "M", "L", "XL"],
     "colors": ["White"],
-    "image": "/images/products/classic-white-tshirt.jpg",
+    "image": "/src/assets/carousel/car_3.webp",
     "description": "A timeless white T-shirt made with 100% organic cotton."
   },
   {
@@ -16,7 +16,7 @@
     "price": 49.99,
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "colors": ["Blue", "Black"],
-    "image": "/images/products/slim-fit-jeans.jpg",
+    "image": "/src/assets/carousel/car_2.jpg",
     "description": "A comfortable T-shirt featuring bold graphics for a modern look."
   },
   {
@@ -26,7 +26,7 @@
     "price": 39.99,
     "sizes": ["M", "L", "XL", "XXL"],
     "colors": ["Gray", "Navy Blue"],
-    "image": "/images/products/hooded-sweatshirt.jpg",
+    "image": "/src/assets/carousel/car_1.jpg",
     "description": "A classic hoodie made with soft fleece to keep you warm and stylish."
   },
   {
@@ -36,7 +36,7 @@
     "price": 59.99,
     "sizes": ["S", "M", "L"],
     "colors": ["Red", "Yellow", "Green"],
-    "image": "/images/products/floral-summer-dress.jpg",
+    "image": "/src/assets/products/hoodie1.jpg",
     "description": "A cozy pullover sweatshirt for casual comfort and everyday wear."
   },
   {
@@ -46,7 +46,7 @@
     "price": 119.99,
     "sizes": ["M", "L", "XL"],
     "colors": ["Black", "Brown"],
-    "image": "/images/products/leather-jacket.jpg",
+    "image": "/src/assets/products/hoodie2.jpeg",
     "description": "A versatile zip-up sweatshirt perfect for layering and keeping warm."
   }
 ]

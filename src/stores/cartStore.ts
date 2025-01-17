@@ -6,6 +6,8 @@ interface CartItem {
   price: number
   quantity: number
   image: string
+  size: string
+  color: string
 }
 
 export const useCartStore = defineStore('cart', {
@@ -21,27 +23,34 @@ export const useCartStore = defineStore('cart', {
     },
   },
   actions: {
-    addToCart(product: CartItem) {
-      const existingItem = this.items.find((item) => item.id === product.id)
+    addToCart(product: Omit<CartItem, 'quantity'>) {
+      const existingItem = this.items.find(
+        (item) =>
+          item.id === product.id && item.size === product.size && item.color === product.color,
+      )
+
       if (existingItem) {
         existingItem.quantity++
       } else {
-        product.quantity = 1
-        this.items.push(product)
+        this.items.push({ ...product, quantity: 1 })
       }
       this.saveCart()
     },
-    removeFromCart(productId: number) {
-      this.items = this.items.filter((item) => item.id !== productId)
+    removeFromCart(productId: number, size: string, color: string) {
+      this.items = this.items.filter(
+        (item) => !(item.id === productId && item.size === size && item.color === color),
+      )
       this.saveCart()
     },
-    updateQuantity(productId: number, quantity: number) {
-      const item = this.items.find((item) => item.id === productId)
+    updateQuantity(productId: number, size: string, color: string, quantity: number) {
+      const item = this.items.find(
+        (item) => item.id === productId && item.size === size && item.color === color,
+      )
       if (item) {
         if (quantity > 0) {
           item.quantity = quantity
         } else {
-          this.removeFromCart(productId)
+          this.removeFromCart(productId, size, color)
         }
       }
       this.saveCart()

@@ -52,7 +52,7 @@ export default defineComponent({
       carouselImages: [
         '/src/assets/carousel/car_1.jpg',
         '/src/assets/carousel/car_2.jpg',
-        '/src/assets/carousel/car_3.jpg',
+        '/src/assets/carousel/car_3.webp',
       ],
       currentSlide: 0,
     }

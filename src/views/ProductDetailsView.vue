@@ -17,7 +17,11 @@
             <span
               v-for="size in product?.sizes"
               :key="size"
-              class="px-4 py-2 bg-gray-200 rounded-full text-gray-800 text-sm"
+              @click="selectSize(size)"
+              :class="[
+                'px-4 py-2 rounded-full text-sm cursor-pointer',
+                selectedSize === size ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800',
+              ]"
             >
               {{ size }}
             </span>
@@ -30,10 +34,13 @@
             <span
               v-for="color in product?.colors"
               :key="color"
-              class="px-4 py-2 bg-gray-200 rounded-full text-gray-800 text-sm"
-            >
-              {{ color }}
-            </span>
+              @click="selectColor(color)"
+              :class="[
+                'w-8 h-8 rounded-full border-2 cursor-pointer',
+                selectedColor === color ? 'border-blue-500' : 'border-gray-300',
+              ]"
+              :style="{ backgroundColor: color.toLowerCase() }"
+            ></span>
           </div>
         </div>
 
@@ -43,6 +50,7 @@
             v-if="!isLoading"
             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
             @click="addToCart"
+            :disabled="!selectedSize || !selectedColor"
           >
             Add to Cart
           </button>
@@ -91,6 +99,8 @@ export default defineComponent({
   data() {
     return {
       product: null as Product | null,
+      selectedSize: null as string | null,
+      selectedColor: null as string | null,
       alertVisible: false,
       alertMessage: '',
       isLoading: false,
@@ -102,9 +112,20 @@ export default defineComponent({
     },
   },
   methods: {
+    selectSize(size: string) {
+      this.selectedSize = size
+    },
+    selectColor(color: string) {
+      this.selectedColor = color
+    },
     addToCart() {
       if (!this.product) {
         console.error('Product is null')
+        return
+      }
+
+      if (!this.selectedSize || !this.selectedColor) {
+        console.error('Size or color not selected')
         return
       }
 
@@ -115,11 +136,12 @@ export default defineComponent({
           id: this.product!.id,
           name: this.product!.name,
           price: this.product!.price,
-          quantity: 1,
           image: this.product!.image,
+          size: this.selectedSize as string,
+          color: this.selectedColor as string,
         })
 
-        this.alertMessage = `${this.product!.name} has been added to the cart!`
+        this.alertMessage = `${this.product!.name} (${this.selectedSize}, ${this.selectedColor}) has been added to the cart!`
         this.alertVisible = true
         this.isLoading = false
 

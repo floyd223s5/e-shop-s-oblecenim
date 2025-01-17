@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-red-800 text-white font-bold text-center py-1.5">
+  <div class="bg-blue-600 text-white font-bold text-center py-1.5">
     <p>Get your 10% off of your first order with our code: NEW10</p>
   </div>
   <nav class="bg-white shadow-md">

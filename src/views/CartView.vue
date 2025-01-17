@@ -10,7 +10,7 @@
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div
           v-for="item in cartStore.items"
-          :key="item.id"
+          :key="`${item.id}-${item.size}-${item.color}`"
           class="flex items-center bg-white rounded-lg shadow-md p-4"
         >
           <img
@@ -22,6 +22,8 @@
           <div class="flex-1">
             <h2 class="text-lg font-bold text-gray-900">{{ item.name }}</h2>
             <p class="text-gray-600 mt-1">Price: ${{ item.price.toFixed(2) }}</p>
+            <p class="text-gray-600 mt-1">Size: {{ item.size }}</p>
+            <p class="text-gray-600 mt-1">Color: {{ item.color }}</p>
             <div class="mt-4 flex items-center">
               <label for="quantity" class="text-sm font-medium text-gray-700 mr-2">Quantity:</label>
               <input
@@ -30,13 +32,12 @@
                 v-model.number="item.quantity"
                 min="1"
                 class="w-16 px-2 py-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-                @change="updateQuantity(item.id, item.quantity)"
               />
             </div>
           </div>
 
           <button
-            @click="removeFromCart(item.id)"
+            @click="removeFromCart(item.id, item.size, item.color)"
             class="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600"
           >
             Remove
@@ -74,13 +75,8 @@ export default defineComponent({
     }
   },
   methods: {
-    removeFromCart(id: number) {
-      this.cartStore.removeFromCart(id)
-    },
-    updateQuantity(id: number, quantity: number) {
-      if (quantity > 0) {
-        this.cartStore.updateQuantity(id, quantity)
-      }
+    removeFromCart(id: number, size: string, color: string) {
+      this.cartStore.removeFromCart(id, size, color)
     },
   },
 })
